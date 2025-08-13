@@ -41,6 +41,7 @@ use pocketmine\nbt\NbtException;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\network\mcpe\NetworkBroadcastUtils;
 use pocketmine\network\mcpe\protocol\ClientboundPacket;
+use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\network\mcpe\protocol\serializer\ItemTypeDictionary;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
 use pocketmine\network\mcpe\protocol\types\GameMode as ProtocolGameMode;
@@ -100,7 +101,7 @@ class TypeConverter{
 			$this->itemDataDowngrader
 		);
 
-		$this->skinAdapter = new LegacySkinAdapter();
+		$this->skinAdapter = $protocolId === ProtocolInfo::CURRENT_PROTOCOL ? new LegacySkinAdapter() : TypeConverter::getInstance()->getSkinAdapter();
 	}
 
 	public function getBlockTranslator() : BlockTranslator{ return $this->blockTranslator; }

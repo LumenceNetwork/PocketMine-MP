@@ -1,5 +1,5 @@
 {
-   "name": "nethergamesmc/pocketmine-mp",
+   "name": "lumencenetwork/pocketmine-mp",
    "description": "A server software for Minecraft: Bedrock Edition written in PHP",
    "type": "project",
    "homepage": "https://pmmp.io",
@@ -36,7 +36,7 @@
       "pocketmine/bedrock-block-upgrade-schema": "~5.1.0+bedrock-1.21.60",
       "nethergamesmc/bedrock-data": "dev-master",
       "pocketmine/bedrock-item-upgrade-schema": "dev-feature/1.21.100",
-      "nethergamesmc/bedrock-protocol": "dev-master",
+      "lumencenetwork/bedrock-protocol": "dev-master",
       "pocketmine/binaryutils": "^0.2.1",
       "pocketmine/callback-validator": "^1.0.2",
       "pocketmine/color": "^0.3.0",
@@ -100,7 +100,7 @@
    "repositories": [
       {
          "type": "vcs",
-         "url":  "git@github.com:NetherGamesMC/BedrockProtocol.git"
+         "url":  "git@github.com:LumenceNetwork/BedrockProtocol.git"
       },
       {
          "type": "vcs",
